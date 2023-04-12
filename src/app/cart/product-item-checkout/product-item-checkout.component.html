@@ -23,7 +23,7 @@
     <div class="col-12 col-md-3">
       {{ product.price | number: "1.2-2" | currency }} x
       {{ product.orderedCount }} =
-      {{ product.totalPrice | number: "1.2-2" | currency }}
+      {{ (product.price * product.orderedCount) | number: "1.2-2" | currency }}
     </div>
   </div>
 </mat-card>
